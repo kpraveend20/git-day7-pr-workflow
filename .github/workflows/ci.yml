@@ -1,0 +1,37 @@
+name: Day 7 CI
+
+on:
+  push:
+    branches:
+      - main
+      - "feature/**"
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate Application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Check application file
+        run: test -f app/app.txt
+
+      - name: Check application status
+        run: grep -q "Application Status: Running" app/app.txt
+
+      - name: Display application information
+        run: cat app/app.txt
+
+      - name: CI Success
+        run: echo "Day 7 CI pipeline completed successfully."

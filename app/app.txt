@@ -1,0 +1,5 @@
+Git Day 7 Application
+
+Application Status: Running
+Environment: Development
+Version: 1.0
