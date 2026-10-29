@@ -1,3 +1,4 @@
+
 name: Day 7 CI
 
 on:
@@ -34,4 +35,5 @@ jobs:
         run: cat app/app.txt
 
       - name: CI Success
-        run: echo "Day 7 CI pipeline completed successfully."
+        run: |
+          echo "Day 7 CI pipeline completed successfully."
