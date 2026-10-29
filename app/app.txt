@@ -2,4 +2,5 @@ Git Day 7 Application
 
 Application Status: Running
 Environment: Development
-Version: 1.0
+Version: 1.1
+Feature: Application monitoring
