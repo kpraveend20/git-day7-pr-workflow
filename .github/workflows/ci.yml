@@ -5,12 +5,10 @@ on:
   push:
     branches:
       - main
-      - "feature/**"
-
+      - 'feature/**'
   pull_request:
     branches:
       - main
-
   workflow_dispatch:
 
 permissions:
@@ -29,7 +27,9 @@ jobs:
         run: test -f app/app.txt
 
       - name: Check application status
-        run: grep -q "Application Status: Running" app/app.txt
+        shell: bash
+        run: |
+          grep -q 'Application Status: Running' app/app.txt
 
       - name: Display application information
         run: cat app/app.txt
