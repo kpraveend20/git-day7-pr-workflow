@@ -1,6 +1,6 @@
 Git Day 7 Application
 
-Application Status: Running
+Application Status: Stopped
 Environment: Development
 Version: 1.1
 Feature: Application monitoring
